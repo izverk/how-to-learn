@@ -10,22 +10,343 @@
 }
 
 .header {
+  /*Шапка сайта*/
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo {
+  /*Логотип Яндекс Практикум*/
+  width: 183px;
+}
+
+.logo_place_header {
+  /*Модификатор логотипа Яндекс Практикум для шапки*/
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.logo_place_footer {
+  /*Модификатор логотипа Яндекс Практикум для подвала*/
+  height: 35px;
+}
+
+.header__title {
+  /*Основной заголовок шапки*/
+  width: 730px;
+  height: fit-content;
+  /*justify-content: flex-start;*/
+  margin: 0 0 0 64px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.header__subtitle {
+  /*Подзаголовок шапки со ссылкой*/
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+  width: 388px;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  z-index: 3;
+}
+
+.header__link {
+  /*Сслыка в шапке*/
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.header__main-illustration {
+  /*Картина в шапке*/
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 765px;
+  height: 608px;
+  z-index: 1;
+}
+
 .header__square-pic {
+  /*Квадрат за картиной в шапке*/
+  position: absolute;
+  right: 0;
+  top: 64px;
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  z-index: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+.description {
+  /*Cекция "Описание проблемы"*/
+  margin: 100px 0 0;
+  display: flex;
+}
+
+.two-columns {
+  /*Блок "Два столбца" секции "Описание проблемы"*/
+  display: flex;
+  margin: 0 auto;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 80%;
+  min-height: 332px;
+}
+
+.two-columns__brief {
+  /*Столбец "Заголовок" блока "Два столбца" секции "Описание проблемы"*/
+  margin: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  color: #2f80ed;
+  font-weight: normal;
+}
+
+.two-columns__main-text {
+  /*Столбец "Основной текст" блок "Два столбца" секции "Описание проблемы" - контейнер с параграфами"*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  /*Параграфы внутри столбца контейнера "Два столбца"*/
+  margin: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__span-accent {
+  /*Выделение полужирным шрифтом в теге спан внутри параграфа в столбце контейнера "Два столбца"*/
+  font-weight: bold;
+}
+
+.digits {
+  /*Секция "Цифры и факты"*/
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  /*Основной заголовок секции "Цифры и факты"*/
+  width: 60%;
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-title_theme_white {
+  /*Модификатор основного заголовка секции "Цифры и факты" для светлой темы*/
+  margin: 100px auto 0;
+}
+
+.section-title_theme_dark {
+  /*Модификатор основного заголовка секции "Цифры и факты" для темной темы*/
+  margin: 90px auto 0;
+  color: #fff;
+  z-index: 3;
+}
+
+.section-subtitle {
+  /*Подзаголовок секции "Цифры и факты"*/
+  width: 60%;
+  margin: 20px auto 0;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.section-subtitle_theme_dark {
+  /*Модификатор подзаголовка секции "Цифры и факты" для темной темы*/
+  color: #fff;
+  z-index: 3;
+}
+
+.table {
+  /*Таблица секции "Цифры и факты"*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto 100px;
+}
+
+.table_theme_dark {
+  /*Модификатор таблицы секции "Цифры и факты" для темной темы*/
+    margin: 0 auto 90px;
+    z-index: 3;
+}
+
+.table__cell {
+  /*Ячейка таблицы секции "Цифры и факты"*/
+  width: 250px;
+  margin: 60px 0 0;
+}
+
 .table__cell_theme_dark {
+  /*Модификатор ячейки таблицы секции "Фейнман" для секции "Кауфман"*/
   width: 200px;
   color: white;
-  margin-right: 0;
+  /*margin-right: 0;*//*Это свойство было изначально задано авторами задания!!!*/
   margin-top: 80px;
 }
+
+.table__heading {
+  /*Заголовок ячейки таблицы секции "Цифры и факты"*/
+  margin: 0 0 20px;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: bold;
+}
+
+.table__text {
+  /*Текст ячейки таблицы секции "Цифры и факты"*/
+  margin: 20px 0 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.feynman {
+  /*Секция "Фейнман"*/
+  height: 890px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.feynman__title {
+  /*Заголовок секции "Фейнман"*/
+  width: 648px;
+  margin: 100px auto 0;
+  font-size: 120px;
+  line-height: 1.15;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feynman__subtitle {
+  /*Подзаголовок секции "Фейнман"*/
+  width: fit-content;
+  margin: 70px auto 0;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.feynman__link {
+  /*Ссылка в секции "Фейнман"*/
+  width: fit-content;
+  font-size: 36px;
+  line-height: 51px;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.kaufman {
+  /*Секция "Кауфман"*/
+  background-color: #1f1f1f;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.kaufman__triangle {
+  /*Рисунок "Треугольник" в секции "Кауфман"*/
+  width: 877px;
+  height: 877px;
+  z-index: 2;
+  position: absolute;
+  right: -210px;
+}
+
+.footer {
+  /*Подвал сайта*/
+  background-color: #1f1f1f;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer__columns {
+  /*Блок с тремя столбцами в подвале сайта*/
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.footer__column_content_copyright {
+  /*Столбец подвала с логотипом и автором*/
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__autor {
+  /*Блок "Автор" подвала*/
+  margin-top: 18px;
+  margin-bottom: 18px;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.footer__column-heading {
+  /*Заголовок столбца подвала*/
+  margin: 0 0 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__column-links {
+  /*Блок (список) ссылок в столбце подвала*/
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.footer__column-link {
+  /*Ссылка в подвале*/
+  line-height: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+/*
+* {
+  outline: red solid 1px;
+}
+*/
