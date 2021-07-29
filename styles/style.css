@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   background-color: #f2f2f2;
+  z-index: 1;
 }
 
 .logo {
@@ -48,7 +49,6 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  z-index: 2;
 }
 
 .header__subtitle {
@@ -62,7 +62,6 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  z-index: 3;
 }
 
 .header__link {
@@ -78,7 +77,7 @@
   bottom: 0;
   width: 765px;
   height: 608px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .header__square-pic {
@@ -89,7 +88,7 @@
   height: 568px;
   width: 568px;
   background-color: #2f80ed;
-  z-index: 0;
+  z-index: -2;
 }
 
 .description {
@@ -105,7 +104,6 @@
   align-items: stretch;
   justify-content: space-between;
   width: 80%;
-  min-height: 332px;
 }
 
 .two-columns__brief {
@@ -120,9 +118,6 @@
 
 .two-columns__main-text {
   /*Столбец "Основной текст" блок "Два столбца" секции "Описание проблемы" - контейнер с параграфами"*/
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin: 0;
   width: 80%;
   min-width: 784px;
@@ -130,10 +125,15 @@
 
 .two-columns__paragraph {
   /*Параграфы внутри столбца контейнера "Два столбца"*/
-  margin: 0;
+  margin: 0 0 30px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+}
+
+.two-columns__paragraph:last-child {
+  /*Убираем нижний отступ у последнего параграфа в столбце*/
+  margin: 0;
 }
 
 .two-columns__span-accent {
@@ -150,22 +150,17 @@
 .section-title {
   /*Основной заголовок секции "Цифры и факты"*/
   width: 60%;
+  margin: 100px auto 0;
   font-size: 60px;
   line-height: 1.15;
   font-weight: bold;
   text-align: center;
 }
 
-.section-title_theme_white {
-  /*Модификатор основного заголовка секции "Цифры и факты" для светлой темы*/
-  margin: 100px auto 0;
-}
-
 .section-title_theme_dark {
   /*Модификатор основного заголовка секции "Цифры и факты" для темной темы*/
   margin: 90px auto 0;
   color: #fff;
-  z-index: 3;
 }
 
 .section-subtitle {
@@ -173,6 +168,7 @@
   width: 60%;
   margin: 20px auto 0;
   font-size: 24px;
+  font-weight: normal;
   line-height: 34px;
   text-align: center;
 }
@@ -180,11 +176,12 @@
 .section-subtitle_theme_dark {
   /*Модификатор подзаголовка секции "Цифры и факты" для темной темы*/
   color: #fff;
-  z-index: 3;
 }
 
 .table {
   /*Таблица секции "Цифры и факты"*/
+  list-style: none;
+  padding-inline-start: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -195,7 +192,6 @@
 .table_theme_dark {
   /*Модификатор таблицы секции "Цифры и факты" для темной темы*/
     margin: 0 auto 90px;
-    z-index: 3;
 }
 
 .table__cell {
@@ -229,7 +225,7 @@
 
 .feynman {
   /*Секция "Фейнман"*/
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
@@ -280,10 +276,12 @@
 }
 
 .kaufman__triangle {
-  /*Рисунок "Треугольник" в секции "Кауфман"*/
+  /*Фоновый рисунок - синий треугольник в секции "Кауфман"*/
   width: 877px;
   height: 877px;
-  z-index: 2;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
+  z-index: -1;
   position: absolute;
   right: -210px;
 }
@@ -298,7 +296,7 @@
 }
 
 .footer__columns {
-  /*Блок с тремя столбцами в подвале сайта*/
+  /*Блок "Столбцы" в подвале сайта*/
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -306,13 +304,23 @@
   margin-bottom: 40px;
 }
 
-.footer__column_content_copyright {
-  /*Столбец подвала с логотипом и автором*/
-  flex-basis: 711px;
+.footer__column {
+  /*Блок "Столбец" блока "Столбцы" в подвале сайта*/
   display: flex;
   flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  /*Модификатор для Столбца с логотипом и автором*/
+  flex-basis: 711px;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.footer__column_content_info,
+.footer__column_content_social {
+  /*Модификатор для Столбцов со ссылками на Практикум и Соцсети*/
+  align-items: stretch;
 }
 
 .footer__autor {
@@ -345,8 +353,14 @@
   text-decoration: none;
   color: #fff;
 }
-/*
+
+.social-icon {
+  height: 16px;
+  width: 16px;
+  margin: 0 10px 0 0;
+}
+
 * {
   outline: red solid 1px;
 }
-*/
+
