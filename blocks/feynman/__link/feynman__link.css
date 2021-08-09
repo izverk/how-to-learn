@@ -1,0 +1,11 @@
+.feynman__link {
+  /*Ссылка в секции "Фейнман"*/
+  width: fit-content;
+  font-size: 36px;
+  line-height: 51px;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+  color: #2f80ed;
+}

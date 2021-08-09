@@ -1,0 +1,7 @@
+.logo_place_header {
+  /*Модификатор логотипа Яндекс Практикум для шапки*/
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}

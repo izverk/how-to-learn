@@ -1,0 +1,6 @@
+.footer__column_content_copyright {
+  /*Модификатор для Столбца с логотипом и автором*/
+  flex-basis: 711px;
+  justify-content: space-between;
+  align-items: flex-start;
+}

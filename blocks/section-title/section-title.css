@@ -1,0 +1,9 @@
+.section-title {
+  /*Основной заголовок секции "Цифры и факты"*/
+  width: 60%;
+  margin: 100px auto 0;
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: bold;
+  text-align: center;
+}

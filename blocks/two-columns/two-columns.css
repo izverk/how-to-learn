@@ -1,0 +1,8 @@
+.two-columns {
+  /*Блок "Два столбца" секции "Описание проблемы"*/
+  display: flex;
+  margin: 0 auto;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 80%;
+}

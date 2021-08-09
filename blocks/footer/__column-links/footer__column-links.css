@@ -1,0 +1,6 @@
+.footer__column-links {
+  /*Блок (список) ссылок в столбце подвала*/
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}

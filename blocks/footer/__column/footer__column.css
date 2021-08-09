@@ -1,0 +1,5 @@
+.footer__column {
+  /*Блок "Столбец" блока "Столбцы" в подвале сайта*/
+  display: flex;
+  flex-direction: column;
+}

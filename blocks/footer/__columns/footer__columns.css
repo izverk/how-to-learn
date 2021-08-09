@@ -1,0 +1,8 @@
+.footer__columns {
+  /*Блок "Столбцы" в подвале сайта*/
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
