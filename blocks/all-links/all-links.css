@@ -1,8 +1,8 @@
 .all-links {
   color: #2f80ed;
+  transition: 0.2s linear;
 }
 
 .all-links:hover {
-  transition: 0.2s linear;
   opacity: 0.5;
 }
