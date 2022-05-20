@@ -20,6 +20,6 @@
 - iframe, embed;
 - Анимации. Плавность переходов.
 
-## 4. Ссылки:
+## 4. Ссылки
 
-посмотреть проект на Github Pages - file:///home/izverk/dev/how-to-learn/index.html
+Посмотреть проект на Github Pages - [https://izverk.github.io/how-to-learn/](https://izverk.github.io/how-to-learn/)
